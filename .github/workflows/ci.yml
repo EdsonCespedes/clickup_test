@@ -11,32 +11,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout del Código
+    - name: Checkout Code
       uses: actions/checkout@v4
 
-    - name: Configurar Python 3.14
+    - name: Set up Python 3.14
       uses: actions/setup-python@v5
       with:
         python-version: "3.14"
         cache: 'pip'
 
-    - name: Instalar Dependencias
+    - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Ejecutar Linter y Formatter (Ruff)
+    - name: Run Linter and Formatter (Ruff)
       run: ruff check .
 
-    - name: Ejecutar Suite de Pruebas en Paralelo (Pytest)
+    - name: Run Test Suite (Pytest)
       env:
         CLICKUP_API_URL: https://api.clickup.com/api/v2
         CLICKUP_API_TOKEN: ${{ secrets.CLICKUP_API_TOKEN }}
         ENV: ci
+      # Limited to 3 workers to respect ClickUp free plan limits
       run: |
-        pytest -n auto -x
+        pytest -v -n 3
 
-    - name: Guardar Artefactos de Reportes
+    - name: Upload Report Artifacts
       uses: actions/upload-artifact@v4
       if: always()
       with:
