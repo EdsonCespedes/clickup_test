@@ -1,0 +1,25 @@
+# Entornos Virtuales
+venv/
+.venv/
+env/
+
+# Caché de Python y Testing
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+
+# Reportes Generados dinámicamente
+reports/
+htmlcov/
+
+# Variables de entorno locales (Datos sensibles)
+.env
+config/environments/*.env
+!.github/
+
+# IDEs
+.vscode/
+.idea/

@@ -1,0 +1,20 @@
+[tool.pytest.ini_options]
+addopts = "-v -n auto --html=reports/html/report.html --self-contained-html --junitxml=reports/junit/report.xml --cov=core --cov=domains --cov-report=html:reports/coverage --cov-report=xml:reports/junit/coverage.xml"
+testpaths = ["tests"]
+
+markers = [
+    "smoke: Basic API availability and status verification tests.",
+    "functional: Tests for expected behavior and CRUD logic.",
+    "negative: Tests for error handling, invalid schemas, and 4xx/5xx status codes.",
+    "acceptance: End-to-end (E2E) workflow validation tests.",
+    "regression: Regression tests to ensure stability of critical components."
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = []
+fixable = ["ALL"]
