@@ -1,5 +1,7 @@
 import sys
+
 import structlog
+
 
 def setup_logging() -> None:
     """

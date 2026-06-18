@@ -1,5 +1,6 @@
 from helpers.random_generator import generate_random_name
 
+
 class TaskPayloads:
     @staticmethod
     def build_create_task_payload(name: str = None, description: str = "Test Description") -> dict:

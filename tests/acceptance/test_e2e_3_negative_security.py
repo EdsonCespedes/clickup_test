@@ -1,10 +1,9 @@
 import pytest
 import pytest_check as check
-from core.request_manager import RequestManager
 
+from core.request_manager import RequestManager
 from domains.tasks.task_endpoints import TaskEndpoints
 from domains.tasks.task_payloads import TaskPayloads
-from domains.tasks.task_data import TaskData
 
 
 @pytest.mark.acceptance

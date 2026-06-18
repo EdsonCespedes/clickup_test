@@ -1,5 +1,6 @@
 from core.request_manager import RequestManager
 
+
 class TeamEndpoints:
     """
     Endpoint handler for all Workspace (Teams) related API requests.

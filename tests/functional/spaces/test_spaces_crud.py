@@ -1,5 +1,6 @@
 import pytest
 import pytest_check as check
+
 from domains.spaces.space_endpoints import SpaceEndpoints
 from domains.spaces.space_payloads import SpacePayloads
 from domains.spaces.space_schemas import SpaceSchema
@@ -9,7 +10,7 @@ from domains.spaces.space_schemas import SpaceSchema
 def test_create_and_validate_space(shared_e2e_space, worker_id):
     """Verifies the creation state using the already created shared space to avoid limits."""
     api = SpaceEndpoints()
-    
+
     response = api.get_space(shared_e2e_space)
     assert response.status_code == 200
 

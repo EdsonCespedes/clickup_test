@@ -1,5 +1,6 @@
 from typing import Any, Dict
 
+
 class Singleton(type):
     """Metaclass implementing the Singleton design pattern in a clean way."""
 

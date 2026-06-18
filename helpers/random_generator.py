@@ -1,5 +1,6 @@
 import uuid
 
+
 def generate_random_name(prefix: str = "Test") -> str:
     """
     Generates a unique random suffix to avoid collisions during parallel execution.

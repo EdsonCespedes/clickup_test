@@ -1,7 +1,6 @@
 import pytest
 import pytest_check as check
 
-from core.logger import logger
 from domains.folders.folder_endpoints import FolderEndpoints
 from domains.folders.folder_payloads import FolderPayloads
 from domains.lists.list_endpoints import ListEndpoints

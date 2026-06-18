@@ -7,6 +7,7 @@ from domains.lists.list_payloads import ListPayloads
 from domains.tasks.task_endpoints import TaskEndpoints
 from domains.tasks.task_payloads import TaskPayloads
 
+
 @pytest.mark.acceptance
 def test_e2e_state_tracking(shared_e2e_space):
     """HLTC 2: State tracking (Folderless List -> Task)."""
