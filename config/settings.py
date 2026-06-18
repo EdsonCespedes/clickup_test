@@ -1,5 +1,5 @@
-from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import Field
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
@@ -7,17 +7,17 @@ class Settings(BaseSettings):
 
     clickup_api_url: str = Field(
         default="https://api.clickup.com/api/v2",
-        env="CLICKUP_API_URL",
+        validation_alias="CLICKUP_API_URL",
     )
 
     clickup_api_token: str = Field(
         ...,
-        env="CLICKUP_API_TOKEN",
+        validation_alias="CLICKUP_API_TOKEN",
     )
 
     env: str = Field(
         default="dev",
-        env="ENV",
+        validation_alias="ENV",
     )
 
     model_config = SettingsConfigDict(

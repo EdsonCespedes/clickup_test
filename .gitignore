@@ -1,9 +1,9 @@
-# Entornos Virtuales
+# Virtual Environments
 venv/
 .venv/
 env/
 
-# Caché de Python y Testing
+# Python and Testing Cache
 __pycache__/
 *.pyc
 .pytest_cache/
@@ -11,11 +11,11 @@ __pycache__/
 .coverage
 .coverage.*
 
-# Reportes Generados dinámicamente
+# Dynamically generated reports
 reports/
 htmlcov/
 
-# Variables de entorno locales (Datos sensibles)
+# Local environment variables (sensitive data)
 .env
 config/environments/*.env
 !.github/
