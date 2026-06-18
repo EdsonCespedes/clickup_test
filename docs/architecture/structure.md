@@ -1,3 +1,4 @@
+```text
 clickup-api-framework/         # Root folder of the automation project.
 ├── .github/                   # GitHub-specific configurations.
 │   └── workflows/             # CI/CD pipeline automation scripts (GitHub Actions).
@@ -21,3 +22,4 @@ clickup-api-framework/         # Root folder of the automation project.
 │   └── unit/                  # Tests for internal framework functions and methods.
 ├── reports/                   # Generated test results, logs, and coverage files.
 └── docs/                      # Project documentation, guides, and manuals.
+```
