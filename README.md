@@ -1,11 +1,5 @@
 # ClickUp API Testing Framework
 
-![Python](https://img.shields.io/badge/Python-3.12+-blue)
-![Pytest](https://img.shields.io/badge/Pytest-Latest-green)
-![Coverage](https://img.shields.io/badge/Coverage-90%25-success)
-![CI](https://img.shields.io/badge/CI-GitHub_Actions-orange)
-![Status](https://img.shields.io/badge/Status-In_Progress-yellow)
-
 ---
 
 # Summary
