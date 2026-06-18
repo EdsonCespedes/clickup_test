@@ -22,7 +22,7 @@ def setup_logging() -> None:
         ],
         context_class=dict,
         logger_factory=structlog.PrintLoggerFactory(),
-        wrapper_class=structlog.make_filtering_bound_logger(10),  # DEBUG level
+        wrapper_class=structlog.make_filtering_bound_logger(10),
         cache_logger_on_first_use=True,
     )
 
